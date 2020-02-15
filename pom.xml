@@ -114,6 +114,7 @@
 
 	<build>
 		<finalName>prueba</finalName>
+		<outputDirectory>${user.home}/${project.artifactId}/docker compose/tomcat/webapps</outputDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

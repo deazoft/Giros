@@ -17,6 +17,7 @@ web:
     JDBC_URL: jdbc:mysql://db:3306/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true
     JDBC_USER: example_db_user
     JDBC_PASS: example_db_pass
+    DATABASE_HOST: db
   ports:
    - "80:8080"
   volumes:
@@ -24,8 +25,12 @@ web:
   links:
     - db
 PhpMyAdmin:
-      image: nazarpc/phpmyadmin
-      ports:
-        - "8090:80"
-      links:
-        - db:mysql
+  image: phpmyadmin/phpmyadmin
+  restart: always
+  ports:
+   - '8090:80'
+  environment:
+   PMA_HOST: db
+   MYSQL_ROOT_PASSWORD: nimda 
+  links:
+   - db
