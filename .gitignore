@@ -1,5 +1,4 @@
 target/
-AppAngular/node_modules/
 dockercomp/tomcat/webapps/
 .classpath
 .project

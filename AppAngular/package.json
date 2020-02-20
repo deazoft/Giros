@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "delete":"rm -R  ./../backend/src/main/resources/static/",
+    "Copy":"cp -R dist/AppAngular/ ./../backend/src/main/resources/static/"
   },
   "private": true,
   "dependencies": {

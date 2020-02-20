@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+// HttpClient module for RESTful API
+import { HttpClientModule } from '@angular/common/http';
+
+import { EstudiantesComponent } from './estudiantes/estudiantes.component';
+import { EstudiantesServiceService} from './estudiantes/estudiantes-service.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EstudiantesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EstudiantesServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
